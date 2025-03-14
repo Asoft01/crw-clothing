@@ -1,14 +1,10 @@
-const FormInput = ({ label, changeHandler, value }) => {
+const FormInput = ({ label, ...otherProps }) => {
     return (
         <div>
             <label>{ label }</label>
-                <input
-                type="text"
-                required
-                onChange={changeHandler}
-                name="displayName"
-                value={displayName}
-            />
+                <input {...otherProps} />
         </div>
     )
 }
+
+export default FormInput;
